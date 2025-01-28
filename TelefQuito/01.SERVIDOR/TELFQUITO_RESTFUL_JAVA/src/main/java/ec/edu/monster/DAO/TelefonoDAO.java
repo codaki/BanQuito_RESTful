@@ -27,30 +27,33 @@ public class TelefonoDAO {
                 telefono.setPrecio(rs.getDouble("precio"));
                 telefono.setMarca(rs.getString("marca"));
                 telefono.setDisponible(rs.getInt("disponible"));
+                telefono.setImgUrl(rs.getString("imgUrl"));
                 return telefono;
             }
         }
         return null;
     }
      public void insertTelefono(Telefonos telefono) throws SQLException {
-        String query = "INSERT INTO telefonos (nombre, precio, marca, disponible) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO telefonos (nombre, precio, marca, disponible, imgUrl) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, telefono.getNombre());
             stmt.setDouble(2, telefono.getPrecio());
             stmt.setString(3, telefono.getMarca());
             stmt.setInt(4, telefono.getDisponible());
+            stmt.setString(5, telefono.getImgUrl());
             stmt.executeUpdate();
         }
     }
 
     public void updateTelefono(Telefonos telefono) throws SQLException {
-        String query = "UPDATE telefonos SET nombre = ?, precio = ?, marca = ?, disponible = ? WHERE cod_telefono = ?";
+        String query = "UPDATE telefonos SET nombre = ?, precio = ?, marca = ?, disponible = ?, imgUrl = ? WHERE cod_telefono = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setString(1, telefono.getNombre());
             stmt.setDouble(2, telefono.getPrecio());
             stmt.setString(3, telefono.getMarca());
             stmt.setInt(4, telefono.getDisponible());
-            stmt.setInt(5, telefono.getCodTelefono());
+            stmt.setString(5, telefono.getImgUrl());
+            stmt.setInt(6, telefono.getCodTelefono());
             stmt.executeUpdate();
         }
     }
@@ -66,6 +69,7 @@ public class TelefonoDAO {
                 telefono.setPrecio(rs.getDouble("precio"));
                 telefono.setMarca(rs.getString("marca"));
                 telefono.setDisponible(rs.getInt("disponible"));
+                telefono.setImgUrl(rs.getString("imgUrl"));
                 telefonosList.add(telefono);
             }
         }

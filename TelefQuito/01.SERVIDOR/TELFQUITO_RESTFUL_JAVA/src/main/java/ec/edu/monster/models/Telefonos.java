@@ -6,23 +6,26 @@ public class Telefonos {
     private double precio;
     private String marca;
     private int disponible;
+    private String imgUrl;
 
     public Telefonos() {
     }
 
-    public Telefonos(int codTelefono, String nombre, double precio, String marca, int disponible) {
+    public Telefonos(int codTelefono, String nombre, double precio, String marca, int disponible, String imgUrl) {
         this.codTelefono = codTelefono;
         this.nombre = nombre;
         this.precio = precio;
         this.marca = marca;
         this.disponible = disponible;
+        this.imgUrl = imgUrl;
     }
 
-    public Telefonos(String nombre, double precio, String marca, int disponible) {
+    public Telefonos(String nombre, double precio, String marca, int disponible, String imgUrl) {
         this.nombre = nombre;
         this.precio = precio;
         this.marca = marca;
         this.disponible = disponible;
+        this.imgUrl = imgUrl;
     }
     
 
@@ -64,5 +67,13 @@ public class Telefonos {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }
