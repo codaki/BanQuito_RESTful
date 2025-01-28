@@ -18,6 +18,7 @@ import jakarta.ws.rs.core.Response;
 
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -43,7 +44,12 @@ public class WSGenerarTabla {
             return Response.status(Response.Status.BAD_REQUEST)
                     .entity("El plazo debe ser entre 3 y 18 meses.").build();
         }
-
+         System.out.println("en Banquito");
+         System.out.println(credito.getMonto());
+         System.out.println(credito.getPlazoMeses());
+         System.out.println(credito.getCodCliente());
+        credito.setTasaInteres(16.5); 
+        credito.setFechaInicio(LocalDate.now().toString());
         GenerarTablaService generarTablaService = new GenerarTablaService();
         try {
             generarTablaService.crearCreditoYTablaAmortizacion(credito);
