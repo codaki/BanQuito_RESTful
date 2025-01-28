@@ -17,7 +17,7 @@ public class WSImage {
     // Upload image using JSON
     @POST
     @Path("/upload")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
     public Response uploadImage(ImageRequest imageRequest) {
         try {
@@ -47,7 +47,7 @@ public class WSImage {
     // Download image as base64 JSON
     @GET
     @Path("/download")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_FORM_URLENCODED)
     public Response downloadImage(@QueryParam("fileName") String fileName) {
         try {
             File file = new File(IMAGE_DIR + fileName);
