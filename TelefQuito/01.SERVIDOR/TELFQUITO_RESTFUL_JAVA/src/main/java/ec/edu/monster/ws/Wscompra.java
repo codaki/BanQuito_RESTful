@@ -53,7 +53,7 @@ public class Wscompra {
     
     @POST
     @Path("efectivo")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED) // Accepts form-urlencoded data
     @Produces(MediaType.TEXT_PLAIN)
     public Response comprarEfectivo(Carrito carrito, @QueryParam("cedula") String cedula) {
         try {
@@ -67,7 +67,7 @@ public class Wscompra {
 
     @POST
     @Path("credito")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED) // Accepts form-urlencoded data
     @Produces(MediaType.TEXT_PLAIN)
     public Response comprarCredito(Carrito carrito, @QueryParam("cedula") String cedula, @QueryParam("plazoMeses") int plazoMeses) {
         try {

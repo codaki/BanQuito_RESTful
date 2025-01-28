@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <title>Buscar Teléfono</title>
+</head>
+
+<body>
+  <div class="movements-container">
+    <div class="search-bar">
+      <button id="crudTelefonosButton" class="btn-primary">
+        Ingresar teléfonos
+      </button>
+      <button id="consultarCreditosButton" class="btn-primary">
+        Consultar Amortizaciones
+      </button>
+    </div>
+    <div id="movements-list" class="movements-list">
+      <!-- Teléfono info will be populated here -->
+    </div>
+  </div>
+  <button class="floating-button" id="cartButton" onclick="window.location.href='carrito.html'">
+    🛒 (<span id="cartCount">0</span>)
+  </button>
+  <div id="modal-container"></div>
+  <!-- Container for modal -->
+  <script type="module">
+    import { getCart } from '/controller/cart.js';
+    fetch("/modal.html")
+      .then((response) => response.text())
+      .then((html) => {
+        document.getElementById("modal-container").innerHTML = html;
+        const modalOkButton = document.getElementById("modal-ok-button");
+        if (modalOkButton) {
+          modalOkButton.addEventListener("click", closeModal);
+        }
+      });
+
+    // Update cart count
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = getCart();
+      document.getElementById('cartCount').innerText = cart.length;
+    });
+  </script>
+  <script type="module" src="/controller/modal.js"></script>
+  <script type="module" src="/controller/telefono.js"></script>
+  <script type="module" src="/controller/cart.js"></script>
+</body>
+
+</html>

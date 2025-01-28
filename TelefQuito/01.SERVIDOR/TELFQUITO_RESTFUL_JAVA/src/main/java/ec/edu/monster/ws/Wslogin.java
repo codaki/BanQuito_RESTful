@@ -24,19 +24,19 @@ public class Wslogin {
     public Wslogin() {
         
     }
- @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
-    public Response auth(@QueryParam("username") String username, @QueryParam("password") String password) {
-        LoginService service = new LoginService();
-        boolean resultado = service.login(username, password);
+@POST
+@Consumes(MediaType.APPLICATION_FORM_URLENCODED) // Accepts form-urlencoded data
+@Produces(MediaType.TEXT_PLAIN)
+public Response auth(@QueryParam("username") String username, @QueryParam("password") String password) {
+    LoginService service = new LoginService();
+    boolean resultado = service.login(username, password);
 
-        if (resultado) {
-            return Response.ok("Autenticación exitosa").build();
-        } else {
-            return Response.status(Response.Status.UNAUTHORIZED)
-                    .entity("Usuario o contraseña incorrectos").build();
-        }
+    if (resultado) {
+        return Response.ok("Autenticación exitosa").build();
+    } else {
+        return Response.status(Response.Status.UNAUTHORIZED)
+                .entity("Usuario o contraseña incorrectos").build();
     }
+}
     
 }

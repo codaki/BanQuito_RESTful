@@ -62,7 +62,7 @@ public class Wstelefonos {
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED) // Accepts form-urlencoded data
     @Produces(MediaType.TEXT_PLAIN)
     public Response insertTelefono(Telefonos telefono) {
         try {
@@ -75,7 +75,7 @@ public class Wstelefonos {
     }
 
     @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED) // Accepts form-urlencoded data
     @Produces(MediaType.TEXT_PLAIN)
     public Response updateTelefono(Telefonos telefono) {
         try {
