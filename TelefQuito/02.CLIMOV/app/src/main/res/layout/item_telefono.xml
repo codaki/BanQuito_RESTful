@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/radius"
+    android:backgroundTint="#C9BAE7"
+    android:gravity="center">
+
+    <!-- Phone Image -->
+    <ImageView
+        android:id="@+id/imgTelefono"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_margin="6dp"
+        android:contentDescription="telefono_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/estrella_triste2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Phone Brand -->
+        <TextView
+            android:id="@+id/tvMarca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_bold"
+            android:text="Marca: Samsung"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Phone Name -->
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredocka_regular"
+            android:text="Nombre: S24"
+            android:textColor="#4E4D4D"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Phone Price -->
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredocka_regular"
+            android:text="Precio: $1000"
+            android:textColor="#4E4D4D"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <!-- Edit Button -->
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:backgroundTint="#0D6EFC"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Deactivate Button -->
+        <Button
+            android:id="@+id/btnDesactivar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desactivar"
+            android:backgroundTint="#0D6EFC"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Sell Button -->
+        <Button
+            android:id="@+id/btnVender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vender"
+            android:backgroundTint="#0D6EFC" />
+    </LinearLayout>
+</LinearLayout>

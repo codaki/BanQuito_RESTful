@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/radius"
+    android:backgroundTint="#C9BAE7">
+
+    <!-- Marca -->
+    <TextView
+        android:id="@+id/tvMarcaCompra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/fredoka_bold"
+        android:text="Marca"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Nombre -->
+    <TextView
+        android:id="@+id/tvNombreCompra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/fredocka_regular"
+        android:text="Nombre"
+        android:textAlignment="center"
+        android:textColor="#4E4D4D"
+        android:textSize="16sp" />
+
+    <!-- Precio -->
+    <TextView
+        android:id="@+id/tvPrecioCompra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/fredocka_regular"
+        android:text="Precio"
+        android:textAlignment="center"
+        android:textColor="#4E4D4D"
+        android:textSize="16sp" />
+
+    <!-- Cantidad -->
+    <TextView
+        android:id="@+id/tvCantidadCompra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/fredocka_regular"
+        android:text="Cantidad"
+        android:textAlignment="center"
+        android:textColor="#4E4D4D"
+        android:textSize="16sp" />
+</LinearLayout>

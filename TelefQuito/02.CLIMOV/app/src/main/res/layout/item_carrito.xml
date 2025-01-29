@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/radius"
+    android:backgroundTint="#C9BAE7"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imgTelefonoCarrito"
+            android:layout_width="134dp"
+            android:layout_height="112dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="telefono_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/estrella_triste2" />
+
+        <Button
+            android:id="@+id/btnDeleteItem"
+            android:layout_width="51dp"
+            android:layout_height="49dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/trash_can"
+            android:backgroundTint="#FF0000"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Phone Brand -->
+        <TextView
+            android:id="@+id/tvMarcaCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_bold"
+            android:text="Marca: Samsung"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Phone Name -->
+        <TextView
+            android:id="@+id/tvNombreCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredocka_regular"
+            android:text="Nombre: S24"
+            android:textColor="#4E4D4D"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Phone Price -->
+        <TextView
+            android:id="@+id/tvPrecioCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredocka_regular"
+            android:text="Precio: $1000"
+            android:textColor="#4E4D4D"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+        <Button
+            android:id="@+id/btnDecreaseCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="-"
+            android:backgroundTint="#0D6EFC"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvCantidadCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fredoka_bold"
+            android:text="Cantidad: 1"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/btnIncreaseCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:backgroundTint="#0D6EFC"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp" />
+
+    </LinearLayout>
+</LinearLayout>
